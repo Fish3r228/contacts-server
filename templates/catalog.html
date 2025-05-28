@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Каталог</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="d-flex">
+    <div class="bg-dark text-white p-3" style="width: 200px; min-height: 100vh;">
+      <h4>Меню</h4>
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Главная</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="catalog.html">Категории</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Заказы</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contacts.html">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="container mt-4">
+      <h1>Каталог</h1>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for _ in range(4) %}
+        <div class="col">
+          <div class="card">
+            <div class="card-img-top bg-secondary text-white text-center p-5">Thumbnail</div>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+              <button class="btn btn-primary">View</button>
+              <button class="btn btn-secondary">Edit</button>
+              <small class="text-muted float-end">9 mins</small>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>
